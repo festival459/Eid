@@ -20,14 +20,12 @@
     <!-- Background Music -->
     <audio id="bg-music" loop>
         <source src="music.mp3" type="audio/mpeg">
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> <!-- Fallback URL -->
-        Your browser does not support the audio element.
     </audio>
 
     <!-- Welcome Screen -->
     <div id="welcome-screen" class="screen flex-center">
         <div class="welcome-content">
-            <h1 class="welcome-title">🌙 Eid Mubarak Surprise 🎁</h1>
+            <h1 id="welcome-title" class="welcome-title">🌙 Eid Mubarak Surprise 🎁</h1>
             <button id="enter-btn" class="glow-btn">Tap to Enter ✨</button>
         </div>
     </div>
@@ -45,15 +43,38 @@
 
         <div class="container">
             <!-- Animated Header -->
-            <h1 class="main-title animated-fade-down">🌙✨ Eid Mubarak ✨🌙</h1>
+            <h1 id="main-title" class="main-title animated-fade-down">🌙✨ Eid Mubarak ✨🌙</h1>
+
+            <!-- Countdown Timer -->
+            <div id="countdown-container" class="glassmorphism animated-fade-down delay-1">
+                <h3 id="countdown-title" class="countdown-title">⏳ Eid in:</h3>
+                <div class="countdown" id="countdown-timer">
+                    <div class="time-box">
+                        <span id="days">00</span><p>Days</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="hours">00</span><p>Hours</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="minutes">00</span><p>Mins</p>
+                    </div>
+                    <div class="time-box">
+                        <span id="seconds">00</span><p>Secs</p>
+                    </div>
+                </div>
+                <!-- Message after 12 AM -->
+                <div id="eid-arrived-msg" style="display: none;">
+                    <h2 class="eid-here-text">🎉 Eid Is Here! Alhamdulilah! 🎉</h2>
+                </div>
+            </div>
 
             <!-- Typing Message Section -->
-            <div class="message-box glassmorphism animated-fade-up delay-1">
+            <div class="message-box glassmorphism animated-fade-up delay-2">
                 <p id="typing-text" class="typing-content"></p>
             </div>
 
             <!-- Glowing Shayari Card -->
-            <div class="glow-card animated-zoom-in delay-2">
+            <div class="glow-card animated-zoom-in delay-3">
                 <i class="fas fa-quote-left quote-icon"></i>
                 <p class="shayari-text">
                     "Chaand ki roshni se roshan ho zindagi tumhari,<br>
@@ -65,7 +86,7 @@
             </div>
 
             <!-- Invitation Message -->
-            <div class="invite-section animated-fade-up delay-3">
+            <div class="invite-section animated-fade-up delay-4">
                 <p class="invite-text">
                     Aapko dil se invite kiya jata hai<br>
                     is khubsurat Eid celebration mein ❤️<br>
@@ -74,9 +95,9 @@
             </div>
 
             <!-- Action Buttons -->
-            <div class="action-buttons animated-fade-up delay-4">
-                <button id="share-btn" class="action-btn gold-btn">
-                    <i class="fas fa-share-alt"></i> Send to Friends
+            <div class="action-buttons animated-fade-up delay-5">
+                <button id="whatsapp-btn" class="action-btn whatsapp-btn">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i> Share on WhatsApp
                 </button>
                 <a href="https://t.me/SagarTech99" target="_blank" class="action-btn telegram-btn">
                     <i class="fab fa-telegram-plane"></i> Join Telegram
